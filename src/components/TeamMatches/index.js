@@ -1,11 +1,12 @@
 import {Component} from 'react'
 import './index.css'
 import Loader from 'react-loader-spinner'
-
+import LatestMatch from '../LatestMatch'
+import MatchCard from '../MatchCard/index'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
 class TeamMatches extends Component {
-  state = {isLoading: true}
+  state = {isLoading: true, matchObj: {}}
 
   componentDidMount() {
     this.getData()
@@ -45,12 +46,14 @@ class TeamMatches extends Component {
       },
       teamBannerUrl: data.team_banner_url,
     }
-    console.log(update.recentMatches)
-    console.log(data)
+    this.setState({isLoading: false, matchObj: update})
   }
 
   render() {
-    const {isLoading} = this.state
+    const {match} = this.props
+    const {id} = match.params
+    const {isLoading, matchObj} = this.state
+    const {teamBannerUrl, latestMatchDetails, recentMatches} = matchObj
     return (
       <div className="team-matches-container">
         {isLoading && (
@@ -63,6 +66,18 @@ class TeamMatches extends Component {
               width={50}
             />{' '}
           </div>
+        )}
+        {!isLoading && (
+          <>
+            <img src={teamBannerUrl} alt="team banner" className="team-banner-img" />
+            <h1 className="latest-matches-heading">Latest Matches</h1>
+            <LatestMatch latestMatchDetails={latestMatchDetails} />
+            <ul className="recent-matches-list">
+              {recentMatches.map(each => (
+                <MatchCard key={each.id} details={each} />
+              ))}
+            </ul>
+          </>
         )}
       </div>
     )

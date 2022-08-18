@@ -1,1 +1,8 @@
 /* Write your CSS here */
+.not-found-bg{
+    height:100vh;
+    background-color:#4f5db0;
+    display:flex;
+    justify-content:center;
+    align-items:center
+}

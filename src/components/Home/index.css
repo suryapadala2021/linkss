@@ -3,6 +3,11 @@
   background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png');
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .home-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  }
+}
 .home-heading {
   font-family: 'Bree Serif';
   color: white;

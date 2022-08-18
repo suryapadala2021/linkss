@@ -1,1 +1,67 @@
 /* Write your CSS here */
+.latest-match-box {
+  background-color: #0f172a;
+  padding: 10px;
+  border-radius: 10px;
+}
+.latest-match-competing-team {
+  color: white;
+  font-family: 'Bree Serif';
+  font-size: 18px;
+}
+.latest-match-competing-date {
+  color: white;
+  font-family: 'Bree Serif';
+  font-size: 15px;
+}
+.latest-match-venue {
+  color: white;
+  font-family: 'Bree Serif';
+  font-size: 12px;
+}
+.latest-compitating-team-logo {
+  height: 50px;
+  width: 50px;
+}
+.latest-match-flex-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.latest-match-flex-text-box {
+  flex-grow: 1;
+}
+.latest-compitating-team-logo-lg {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .latest-match-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+  }
+  .latest-compitating-team-logo {
+    display: none;
+  }
+  .latest-compitating-team-logo-lg {
+    display: inline;
+    height: 180px;
+    width: 180px;
+  }
+  .horizon-line {
+    display: none;
+  }
+  .latest-match-competing-team {
+    font-size: 30px;
+  }
+  .latest-match-flex-text-box {
+    width: 230px;
+  }
+  .latest-match-competing-date {
+    font-size: 20px;
+  }
+  .latest-match-venue {
+    font-size: 15px;
+  }
+}

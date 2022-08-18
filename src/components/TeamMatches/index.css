@@ -1,8 +1,27 @@
 /* Write your CSS here */
 .team-matches-container {
-  height: 100vh;
   background-image: linear-gradient(#d91c1f, #5755a7);
+  padding: 10px;
 }
 .loader {
   text-align: center;
+}
+.team-banner-img {
+  width: 100%;
+}
+.latest-matches-heading {
+  font-family: 'Bree Serif';
+  color: white;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .team-matches-container {
+    padding: 40px;
+  }
+}
+.recent-matches-list{
+  list-style-type: none;
+  padding-left: 0px;
+  display:flex;
+   flex-wrap: wrap;
 }
