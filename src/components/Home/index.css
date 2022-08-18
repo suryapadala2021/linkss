@@ -29,4 +29,20 @@
 .home-teams-matches {
   list-style-type: none;
   padding-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+@media screen and (min-width: 768px) {
+  .home-teams-matches {
+    width: 85%;
+    max-width: 810px;
+    margin: auto;
+    padding: 20px;
+  }
+  .home-container {
+    height: auto;
+  }
 }

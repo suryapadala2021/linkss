@@ -48,7 +48,9 @@ class Home extends Component {
         )}
         {!isLoading && (
           <ul className="home-teams-matches">
-            <TeamCard key={teams[0].id} details={teams[0]} />
+            {teams.map(each => (
+              <TeamCard key={each.id} details={each} />
+            ))}
           </ul>
         )}
       </div>
