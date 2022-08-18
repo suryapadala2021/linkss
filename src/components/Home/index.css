@@ -1,6 +1,5 @@
 /* Write your CSS here */
 .home-container {
-  height: 100vh;
   background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png');
   background-size: cover;
 }

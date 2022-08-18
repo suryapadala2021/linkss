@@ -1,1 +1,8 @@
 /* Write your CSS here */
+.team-matches-container {
+  height: 100vh;
+  background-image: linear-gradient(#d91c1f, #5755a7);
+}
+.loader {
+  text-align: center;
+}
